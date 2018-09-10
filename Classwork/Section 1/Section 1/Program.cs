@@ -157,22 +157,68 @@ namespace Section_1
 
         private static void ViewMovie()
         {
-            Console.WriteLine("ViewMovie");
+            if (String.IsNullOrEmpty(name))
+            {
+                Console.WriteLine("No movies ")
+            }
+
+            Console.WriteLine(name);
+
+            if (!String.IsNullOrEmpty(description))
+                Console.WriteLine(description);
+
+            //Console.WriteLine("Run lenght (min) = " + runLength)
+            Console.WriteLine($"Run length + {runLength} mins");
         }
 
         private static void DeleteMovie()
         {
-            Console.WriteLine("DeleteMovie");
+            if (Cofirm("Are you sure you want to delete this movie?"))
+            {; }
         }
+        private static bool Confirm( string message )
+        {
+            Console.WriteLine(${ message} ("Y/N"));
+            do
+            {
+                ConsoleKeyInfo key = Console.ReadKey();
+
+            case 'Y':
+            case 'y':
+            return true;
+
+            case 'N':
+            case 'n':
+            return false;
+
+
+
+                // if (key.KeyChar == 'Y')
+                //    return true;
+                //  else if (key.KeyChar == 'N')
+                //    return false;
+            } while (true);
+        }
+
 
         private static void EditMovie()
         {
-            Console.WriteLine("EditMovie");
+            ViewMovie();
+
+            string newName = ReadString("Enter a name(or press ENTER for default: ", false);
+            if (String.IsNullOrEmpty(newName))
+                name = newName;
+
+            description = ReadString("Enter a description: ");
+            if (String.IsNullOrEmpty(newDescription))
+                description = newDescription;
+
+            runLength = ReadInt32("Enter run length(in minutes): ", 0);
         }
 
         private static void AddMovie()
-        { 
-            
+        {
+
 
             name = ReadString("Enter a name: ", true);
             description = ReadString("Enter a description: ");
@@ -196,7 +242,7 @@ namespace Section_1
             };
 
         }
-        private static string ReadString ( string message)
+        private static string ReadString( string message )
         {
             return ReadString(message, false);
         }
