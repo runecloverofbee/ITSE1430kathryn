@@ -10,9 +10,11 @@ namespace PizzaCreator
     {
         static void Main(string[] args)
         {
-            
-            
-
+            bool notQuit;
+            do
+            {
+                notQuit = DisplayMenu();
+            }
         }
     }
 
