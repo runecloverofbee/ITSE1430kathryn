@@ -30,12 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._mainMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.movieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.movieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._mainMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,13 +60,12 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
-            // _mainMenu
+            // eExitToolStripMenuItem
             // 
-            this._mainMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this._mainMenu.Name = "_mainMenu";
-            this._mainMenu.Size = new System.Drawing.Size(44, 20);
-            this._mainMenu.Text = "&Help";
+            this.eExitToolStripMenuItem.Name = "eExitToolStripMenuItem";
+            this.eExitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.eExitToolStripMenuItem.Text = "E&xit";
+            this.eExitToolStripMenuItem.Click += new System.EventHandler(this.eExitToolStripMenuItem_Click);
             // 
             // movieToolStripMenuItem
             // 
@@ -78,19 +77,13 @@
             this.movieToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.movieToolStripMenuItem.Text = "&Movie";
             // 
-            // eExitToolStripMenuItem
-            // 
-            this.eExitToolStripMenuItem.Name = "eExitToolStripMenuItem";
-            this.eExitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.eExitToolStripMenuItem.Text = "E&xit";
-            this.eExitToolStripMenuItem.Click += new System.EventHandler(this.eExitToolStripMenuItem_Click);
-            // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Insert;
             this.addToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.OnMovieAdd);
             // 
             // editToolStripMenuItem
             // 
@@ -105,11 +98,19 @@
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
+            // _mainMenu
+            // 
+            this._mainMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this._mainMenu.Name = "_mainMenu";
+            this._mainMenu.Size = new System.Drawing.Size(44, 20);
+            this._mainMenu.Text = "&Help";
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.OnHelpAbout);
             // 
