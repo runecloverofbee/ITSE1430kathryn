@@ -18,7 +18,9 @@ namespace PizzaCreator
         }
         public static string NewOrder()
         {
-
+            string sizeSmall = "$5";
+            string sizeMedium = "$6.25";
+            string sizeLarge = "$8.75";
         }
 
         public static string ModifyOrder
@@ -31,7 +33,7 @@ namespace PizzaCreator
         }
         public static string Quit
         {
-
+            set to cancel;
         }
     }
 
