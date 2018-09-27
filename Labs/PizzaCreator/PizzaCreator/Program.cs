@@ -16,6 +16,24 @@ namespace PizzaCreator
                 notQuit = DisplayMenu();
             }
         }
+        public static string NewOrder()
+        {
+
+        }
+
+        public static string ModifyOrder
+        {
+
+        }
+        public static string DisplayOrder
+        {
+
+        }
+        public static string Quit
+        {
+
+        }
     }
+
 
 }
