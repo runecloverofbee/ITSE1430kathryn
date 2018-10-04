@@ -148,6 +148,7 @@ namespace Itse1430.MovieLib.UI
             this.Name = "AddMovie";
             this.ShowInTaskbar = false;
             this.Text = "Movie Details";
+            this.Load += new System.EventHandler(this.AddMovie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

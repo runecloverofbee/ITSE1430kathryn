@@ -1,6 +1,6 @@
 ﻿namespace Itse1430.MovieLib.UI
 {
-    partial class MainForm
+    partial class MovieForm
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,7 @@
             this.eExitToolStripMenuItem.Name = "eExitToolStripMenuItem";
             this.eExitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.eExitToolStripMenuItem.Text = "E&xit";
-            this.eExitToolStripMenuItem.Click += new System.EventHandler(this.eExitToolStripMenuItem_Click);
+            this.eExitToolStripMenuItem.Click += new System.EventHandler(this.OnCancel);
             // 
             // movieToolStripMenuItem
             // 
@@ -81,21 +81,21 @@
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Insert;
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.OnMovieAdd);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // _mainMenu
@@ -124,6 +124,7 @@
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "Movie Library";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

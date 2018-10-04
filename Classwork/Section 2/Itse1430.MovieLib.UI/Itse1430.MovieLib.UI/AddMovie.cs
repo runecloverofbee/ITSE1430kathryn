@@ -57,7 +57,10 @@ namespace Itse1430.MovieLib.UI
             return -1;
         }
 
+        private void AddMovie_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }       
         

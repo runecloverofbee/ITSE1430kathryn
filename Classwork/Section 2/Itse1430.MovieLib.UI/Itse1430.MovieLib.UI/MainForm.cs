@@ -10,14 +10,18 @@ using System.Windows.Forms;
 
 namespace Itse1430.MovieLib.UI
 {
-    public partial class MainForm : Form
+    public partial class MovieForm : Form
     {
-        public MainForm()
+        #region Construction
+        public MovieForm()
         {
             InitializeComponent();
         }
+        #endregion
 
-        private void eExitToolStripMenuItem_Click( object sender, EventArgs e )
+        public Movie Movie { get; set; }
+
+        private void OnCancel( object sender, EventArgs e )
         {
             if (MessageBox.Show("Are you sure you want to exit?",
                 "Close", MessageBoxButtons.YesNo) == DialogResult.No)
@@ -40,6 +44,11 @@ namespace Itse1430.MovieLib.UI
                 return;
 
             MessageBox.Show("Adding movie");
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
