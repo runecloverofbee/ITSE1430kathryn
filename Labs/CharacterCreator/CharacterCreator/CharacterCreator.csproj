@@ -78,5 +78,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CharacterCreator2\CharacterCreator2.csproj">
+      <Project>{3e31072f-2c9d-40a3-8b96-dde849ac1ffd}</Project>
+      <Name>CharacterCreator2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

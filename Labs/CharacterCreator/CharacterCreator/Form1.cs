@@ -36,5 +36,10 @@ namespace CharacterCreator
         {
             MessageBox.Show(this, "Kathryn Bessent\nIntorduction to C#\nCharacter Creator","About", MessageBoxButtons.OK);
         }
+
+        private void MainFrom_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
